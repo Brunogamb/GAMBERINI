@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
 }
 
 body {
@@ -19,6 +20,7 @@ body {
     flex-direction: column;
     min-height: 100dvh;
     overflow-x: hidden;
+    padding-top: 60px;  
 }
 
 header, main, footer {
@@ -30,21 +32,24 @@ main {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background: #29166f;
-    box-shadow: 0 0 4px 8px rgba(0,0,0,0.05);
-    padding: 10px 280px;
-    min-height: 70px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px; 
 }
-
 
 .main-container {
     max-width: 1200px;
-    min-width: 320px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 a {
@@ -52,12 +57,28 @@ a {
     color: inherit;
 }
 
+.navegation {
+    display: flex;
+    gap: 24px;
+}
+
 .navegation a {
-    display: inline-block;
     color: #f1f1f1;
-    margin: 0 12px;
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.navegation a:hover {
+    color: #b688f9;
+}
+
+.navegation i {
     font-size: 20px;
-    font-weight: 300;
 }
 
 .contacto a {
@@ -68,7 +89,7 @@ a {
     cursor: pointer;
 }
 
-.navegation a:hover, .contacto a:hover {
+.contacto a:hover {
     color: #f1f1f1;
     text-decoration: underline;
 }
@@ -77,8 +98,8 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 80%;
     margin: 2rem auto;
-    max-width: 520px; /*before 720px*/
 }
 
 .logo-title {
@@ -87,6 +108,7 @@ a {
 
 .logo-title img {
     width: 100%;
+    max-width: 520px;
     height: auto;
 }
 
@@ -102,6 +124,7 @@ h2 {
     font-size: clamp(18px, 2vw, 24px);
     font-weight: 300;
     color: #232323;
+    letter-spacing: 1px;
 }
 
 .cards p {
@@ -127,6 +150,7 @@ h2 {
     margin: 20px auto;
     max-width: 1200px;
     box-shadow: 0 0 8px 4px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
 }
 
 .cards img {
@@ -139,8 +163,12 @@ h2 {
     transition: all 0.3s ease;
 }
 
-.cards img:hover, .logo-header img:hover{
+.cards img:hover{
     transform: scale(1.03);
+}
+
+.cards:hover {
+    transform: scale(1.01);
 }
 
 .description {
@@ -305,7 +333,7 @@ h2 {
     text-align: center;
     font-size: 14px;
     color: #f1f1f1;
-    width: 100%;
+    max-width: 80%;
 }
 
 .footer-bottom p {
@@ -329,6 +357,11 @@ h2 {
         padding: 10px 10px; 
     }
 
+    .title-divider {
+        margin: auto;
+        max-width: 90%;
+    }
+
     .cards {
         max-width: 90%;
     }
@@ -338,7 +371,13 @@ h2 {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 960px) {
+    .cards {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
 
     h2 {
         font-size: 20px;
@@ -350,34 +389,39 @@ h2 {
         padding: 0 10px;
     }
 
-    .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .cards img {
         max-width: 300px;
     }
 
-    header {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 20px;
+    body {
+        padding-top: 60px;
     }
 
     .title {
         max-width: 80%;
     }
 
-}
-
-@media (max-width: 455px) {
-    .navegation a, .contacto a {
-        font-size: 18px;
-        margin: 5px;
+    .navegation a {
+        font-size: 14px;
+        flex-direction: column;
     }
 }
 
+@media (max-width: 432px) {
+    .navegation a {
+        font-size: 0;          
+        margin: 0 8px;    
+    }
+
+    .navegation a i {       
+        font-size: clamp(20px, 6vw, 24px);
+    }
+
+    .navegation {
+        gap: 16px;
+        justify-content: center;
+    }
+}
 
 @media (max-width: 350px) {
     .footer-content {

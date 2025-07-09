@@ -11,6 +11,9 @@
 </head>
 <body>
     <header>
+        <div class="header-logo">
+            <img src="IMG/logoblanco.png" alt="Logo Gamberini">
+        </div>
         <nav class="navegation">
             <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
             <a href="sobre-nosotros.html"><i class="fas fa-users"></i> Sobre nosotros</a>
@@ -121,6 +124,19 @@
             <p class="dev-name">Desarrollado por<a href="https://github.com/BrunoGamb" target="_blank" class="dev-link">BrunoGamb</a></p>
         </div>
     </footer>
-    <script src="carrusel.js"></script>
+    <script>
+        const headerLogo = document.querySelector('.header-logo');
+        const logoPrincipal = document.querySelector('.logo-title');
+
+        window.addEventListener('scroll', () => {
+            const logoBottom = logoPrincipal.getBoundingClientRect().bottom;
+
+            if (logoBottom < 60) {
+                headerLogo.classList.add('show');
+            } else {
+                headerLogo.classList.remove('show');
+            }
+        });
+    </script>
     </body>
 </html>

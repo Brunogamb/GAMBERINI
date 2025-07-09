@@ -110,19 +110,6 @@ a {
     font-size: 20px;
 }
 
-.contacto a {
-    display: inline-block;
-    color: #f1f1f1;
-    font-size: 20px;
-    font-weight: 300;
-    cursor: pointer;
-}
-
-.contacto a:hover {
-    color: #f1f1f1;
-    text-decoration: underline;
-}
-
 .title {
     display: flex;
     justify-content: center;
@@ -263,6 +250,10 @@ h2 {
     color: #232323;
 }
 
+.contact-info i {
+    color: #29166f;
+}
+
 .elementos-contacto {
     margin-bottom: 10px;
 }
@@ -357,7 +348,7 @@ h2 {
 .footer-divider {
     width: 100%;
     height: 1px;
-    background-color: rgb(0,0,0);
+    background-color: #b688f9;
     margin: 10px 0;
 }
 
@@ -373,16 +364,20 @@ h2 {
     padding: 0 20px;
 }
 
-.dev-link:hover, .footer a:hover {
-    color: #f1f1f1;
-    text-decoration: underline;
-}
-
 .dev-name {
     margin-top: 10px;
     font-size: 14px;
     color: #f1f1f1;
     font-weight: 300;
+}
+
+.dev-link {
+    font-weight: 600;
+}
+
+.dev-link:hover, .footer a:hover {
+    color: #b688f9;
+    text-decoration: underline;
 }
 
 @media (max-width: 1520px) {

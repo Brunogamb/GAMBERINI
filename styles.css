@@ -103,7 +103,7 @@ a {
 }
 
 .navegation a:hover {
-    color: #b688f9;
+    color: #a793e7;
 }
 
 .navegation i {
@@ -348,7 +348,7 @@ h2 {
 .footer-divider {
     width: 100%;
     height: 1px;
-    background-color: #b688f9;
+    background-color: #a793e7;
     margin: 10px 0;
 }
 
@@ -376,7 +376,7 @@ h2 {
 }
 
 .dev-link:hover, .footer a:hover {
-    color: #b688f9;
+    color: #a793e7;
     text-decoration: underline;
 }
 
